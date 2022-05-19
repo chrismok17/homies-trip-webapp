@@ -1,11 +1,26 @@
 * {
-    margin: 0
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
     display: flex;
     flex-direction:row;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
+    width: 100%;
+    background-color: blue;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.main {
+    margin-top: 50px;
 }
