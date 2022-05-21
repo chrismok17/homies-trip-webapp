@@ -5,8 +5,10 @@ const port = process.env.PORT || 8080
 
 app.use(express.static(__dirname + "/public"))
 
+app.set("view engine", "ejs");
+
 app.use("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/home.html"))
+    res.render("home")
 })
 
 app.listen(port, () => {

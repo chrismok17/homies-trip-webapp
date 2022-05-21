@@ -24,3 +24,13 @@
 .main {
     margin-top: 50px;
 }
+
+#calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#calendar-days div {
+    padding: 5px
+}
