@@ -12,7 +12,9 @@ for (let day = 1; day <= 31; day++) {
         calendar_head.insertAdjacentHTML("beforeend", name)
     }
 
-    calendar.insertAdjacentHTML("beforeend", `<div class="day">${day}</div>`)
+    calendar.insertAdjacentHTML("beforeend", `<div class="day">
+        <div class="daynumber">${day}</div>
+        </div>`)
 }
 calendar.insertAdjacentHTML("beforeend", `<div class="empty"></div>`)
 calendar.insertAdjacentHTML("beforeend", `<div class="empty"></div>`)
