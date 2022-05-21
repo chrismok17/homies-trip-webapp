@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <a href="/">
+                home
+            </a>
+            <a href="#">
+                calendar
+            </a>
+            <a href="#">
+                flights
+            </a>
+            <a href="#">
+                hotels
+            </a>
+        </ul>
+        
+    </nav>  
+    <div class="main">
+        <h1>Add an Event</h1>
+        <div id="add_form">
+            <form action="/event/event_details" method="POST">
+                <div class="add_input">
+                    <p>Event Name</p>
+                    <input id="name" name="name">
+                </div>
+                <div class="add_input">
+                    <p>Day</p>
+                    <input id="day" name="day">
+                </div>
+                <div class="add_input">
+                    <p>Time</p>
+                    <input id="time" name="time">
+                </div>
+                <div class="add_input">
+                    <p>Location</p>
+                    <input id="location" name="location">
+                </div>
+                <div class="add_input">
+                    <p>Going</p>
+                    <input id="going" name="going">
+                </div>
+                <div class="add_input">
+                    <p>Notes</p>
+                    <input id="notes" name="notes">
+                </div>
+                <div class="buttons">
+                    <button type="reset">Cancel</button>
+                    <button type="submit">Save</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

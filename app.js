@@ -2,22 +2,20 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const path = require("path");
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 8080;
 
 // App routes
 
-app.use(express.static(__dirname + "/public"))
+app.use(express.static(__dirname + "/public"));
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
 
-app.use("/", (req, res) => {
-    res.render("home")
-})
-
-
-// Router
-EventRouter = require("./routes/event_router")
-app.use("/event", EventRouter)
+app.get("/", (req, res) => {
+    res.render("home");
+});
 
 // Mongo connection
 
@@ -26,11 +24,15 @@ require("dotenv").config();
 
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Connected"))
-    .catch((err) => console.error(err))
+    .catch((err) => console.error(err));
 db.once("open", () => {
-    console.log("Connected to event-details database")
-})
+    console.log("Connected to event-details database");
+});
+
+// Router
+eventRouter = require("./routes/event_router");
+app.use("/event", eventRouter);
 
 app.listen(port, () => {
-    console.log(`App connected on port ${port}`)
-})
+    console.log(`App connected on port ${port}`);
+});

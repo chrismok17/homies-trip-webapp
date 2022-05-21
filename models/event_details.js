@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const EventDetailSchema = new mongoose.Schema({
-    title: {type: String},
+    name: {type: String},
     day: {type: Number},
     time: {type: String},
     location: {type: String},
-    going: {type: Array},
+    going: {type: String},
     notes: {type: String}
 });
 
