@@ -23,11 +23,8 @@ const db = mongoose.connection;
 require("dotenv").config();
 
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log("Connected"))
+    .then(() => console.log("Connected to MongoDB"))
     .catch((err) => console.error(err));
-db.once("open", () => {
-    console.log("Connected to event-details database");
-});
 
 // Router
 eventRouter = require("./routes/event_router");

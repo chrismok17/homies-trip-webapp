@@ -79,6 +79,27 @@
     transition: background-color 200ms, color 200ms;
 }
 
+.eventname {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.eventtime {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.eventlocation {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
 .daynumber {
     grid-column: 1;
     grid-row: 1;
