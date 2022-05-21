@@ -10,14 +10,14 @@ app.use(express.static(__dirname + "/public"))
 
 app.set("view engine", "ejs");
 
-// app.use("/", (req, res) => {
-//     res.render("home")
-// })
+app.use("/", (req, res) => {
+    res.render("home")
+})
 
 
 // Router
 EventRouter = require("./routes/event_router")
-app.use("/", EventRouter)
+app.use("/event", EventRouter)
 
 // Mongo connection
 

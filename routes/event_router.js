@@ -10,9 +10,6 @@ EventRouter.use(express.json());
 EventRouter.use(express.urlencoded({ extended: true }));
 
 // All HTTP methods go here
-EventRouter.get("/", (req, res) => {
-    res.render("home")
-})
 
 
 module.exports = EventRouter
