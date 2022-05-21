@@ -16,11 +16,14 @@ let countDownDate = new Date("Aug 11, 2022 11:00:00").getTime();
         let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="demo"
-        document.getElementById("countdown").innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+        document.getElementById("days").innerHTML = `${days} days`;
+        document.getElementById("hours").innerHTML = `${hours} hours`;
+        document.getElementById("minutes").innerHTML = `${minutes} minutes`;
+        document.getElementById("seconds").innerHTML = `${seconds} seconds`;
 
         // If the count down is finished, write some text
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("countdown").innerHTML = "EXPIRED";
+            document.getElementById("days").innerHTML = "IT'S VACATION TIME";
         }
         }, 1000);
