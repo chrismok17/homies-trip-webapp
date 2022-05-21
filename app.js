@@ -10,9 +10,9 @@ app.use(express.static(__dirname + "/public"))
 
 app.set("view engine", "ejs");
 
-app.use("/", (req, res) => {
-    res.render("home")
-})
+// app.use("/", (req, res) => {
+//     res.render("home")
+// })
 
 
 // Router
