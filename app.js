@@ -23,9 +23,10 @@ app.use("/event", EventRouter)
 
 const db = mongoose.connection;
 require("dotenv").config();
-const uri = String(process.env.DB_CONNECTION)
 
-mongoose.connect(uri);
+mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log("Connected"))
+    .catch((err) => console.error(err))
 db.once("open", () => {
     console.log("Connected to event-details database")
 })
