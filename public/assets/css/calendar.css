@@ -28,7 +28,7 @@ body {
 .navbar a {
     float: left;
     display: block;
-    color: var(--wheat);
+    color: var(--jet);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -43,6 +43,34 @@ body {
     background-color: var(--jet);
 }
 
+.title {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    color: var(--vegasgold);
+}
+
+#add_event{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--skyblue);
+    border-radius: 15px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+
+a:visited, a:link{
+    color: var(--jet);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--vegasgold);
+    text-shadow: #39393A;
+}
 
 #calendar {
     width: 60%;
@@ -117,6 +145,7 @@ body {
     padding: 20px;
     border-style: solid;
     border-width: 1px;
+    background-color: #d3d3d3;
 }
 
 .day:hover {
