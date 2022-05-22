@@ -32,7 +32,9 @@
         <p><%=day%></p>
         <p><%=time%></p>
         <p><%=location%></p>
-        <p><%=going%></p>
+        <% for (let i in going) { %>
+            <p><%=going[i] %></p>
+        <% } %>
         <p><%=notes%></p>
     </main>
 </body>

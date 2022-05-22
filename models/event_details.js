@@ -5,7 +5,7 @@ const EventDetailSchema = new mongoose.Schema({
     day: {type: Number},
     time: {type: String},
     location: {type: String},
-    going: {type: String},
+    going: {type: Array},
     notes: {type: String}
 });
 

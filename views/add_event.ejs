@@ -32,28 +32,53 @@
         <div id="add_form">
             <form action="/event/event_details" method="POST">
                 <div class="add_input">
-                    <p>Event Name</p>
+                    <label for="name">Event Name:</label>
                     <input id="name" name="name">
                 </div>
                 <div class="add_input">
-                    <p>Day</p>
+                    <label for="day">Day:</label>
                     <input id="day" name="day">
                 </div>
                 <div class="add_input">
-                    <p>Time</p>
+                    <label for="time">Time:</label>
                     <input id="time" name="time">
                 </div>
                 <div class="add_input">
-                    <p>Location</p>
+                    <label for="location">Location:</label>
                     <input id="location" name="location">
                 </div>
                 <div class="add_input">
-                    <p>Going</p>
-                    <input id="going" name="going">
+                    <label>Going:</label>
+                    <label for="chris">Chris</label>
+                    <input type="checkbox" id="chris" name="going" value="Chris">
+
+                    <label for="james">James</label>
+                    <input type="checkbox" id="james" name="going" value="James">
+
+                    <label for="josh">Josh</label>
+                    <input type="checkbox" id="josh" name="going" value="Josh">
+
+                    <label for="june">June</label>
+                    <input type="checkbox" id="june" name="going" value="June">
+
+                    <label for="lesly">Lesly</label>
+                    <input type="checkbox" id="lesly" name="going" value="Lesly">
+
+                    <label for="monica">Monica</label>
+                    <input type="checkbox" id="monica" name="going" value="Monica">
+
+                    <label for="sylvia">Sylvia</label>
+                    <input type="checkbox" id="sylvia" name="going" value="Sylvia">
+                    
+                    <label for="renato">Renato</label>
+                    <input type="checkbox" id="renato" name="going" value="Renato">
+
+                    <label for="all">All</label>
+                    <input type="checkbox" id="all" name="going" value="All">
                 </div>
                 <div class="add_input">
-                    <p>Notes</p>
-                    <input id="notes" name="notes">
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" name="notes" rows="5" cols="20"></textarea>
                 </div>
                 <div class="buttons">
                     <button type="reset">Cancel</button>

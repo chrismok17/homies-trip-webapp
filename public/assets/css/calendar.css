@@ -53,7 +53,7 @@ body {
     color: var(--vegasgold);
 }
 
-#add_event{
+#add_event {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -62,6 +62,25 @@ body {
     border-radius: 15px;
     height: 50px;
     margin-top: 20px;
+}
+
+#add_event_link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+    height: inherit;
+    border-radius: 15px;
+    background-color: var(--skyblue);
+    border: none;
+    cursor: pointer;
+}
+
+#add_event_link:hover {
+    background-color: #3a93c4;
 }
 
 
