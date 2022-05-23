@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <a href="/">
+                home
+            </a>
+            <a href="/event/calendar">
+                calendar
+            </a>
+            <a href="#">
+                flights
+            </a>
+            <a href="#">
+                hotels
+            </a>
+        </ul>
+    </nav>  
+    <main>
+        <% for (let i in events) { %>
+            <h2><%=events[i]["name"] %></h2>
+            <h2>August <%=events[i]["day"] %></h2>
+            <h2><%=events[i]["time"] %></h2>
+            <h2><%=events[i]["location"] %></h2>
+            <% for (let j = 0; j < events[i]["going"].length; j++) { %>
+                <%=events[i]["going"][j] %>
+            <% } %>
+            <h2><%=events[i]["notes"] %></h2>
+        <% } %>
+    </main>
+</body>
+</html>

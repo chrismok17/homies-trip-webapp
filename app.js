@@ -3,13 +3,14 @@ const mongoose = require("mongoose");
 const app = express();
 const path = require("path");
 const port = process.env.PORT || 8080;
+const bodyparser = require("body-parser")
 
 // App routes
 
 app.use(express.static(__dirname + "/public"));
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
 
