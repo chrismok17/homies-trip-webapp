@@ -47,7 +47,7 @@ body {
 }
 
 .title {
-    margin: 50px;
+    margin: 25px;
     display: flex;
     flex-direction: column;
     color: var(--vegasgold);
@@ -123,9 +123,9 @@ a:hover {
     border-width: 1px;
 }
 
-.day {
+.event_on_day {
     display: grid;
-    grid-template-rows: repeat(5, 1fr); /* this probably needs to be changed to allow event details*/
+    grid-template-rows: repeat(5, 0.25fr); /* this probably needs to be changed to allow event details*/
     padding: 10px;
     border-style: solid;
     border-width: 1px;
@@ -133,6 +133,11 @@ a:hover {
     font-size: 12px;
     cursor: pointer;
     transition: background-color 200ms, color 200ms;
+}
+
+.day {
+    font-size: 0.75rem;
+    font-weight:700;
 }
 
 .eventname#1 {
@@ -170,6 +175,7 @@ a:hover {
     background-color: #d3d3d3;
 }
 
-.day:hover {
+.event_on_day:hover {
     background-color: var(--vegasgold);
+    color: black;
 }

@@ -61,3 +61,51 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+#input {
+    display: flex;
+    flex-direction: column;
+}
+
+#name_input, #day_input, #time_input, #location_input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#going_input {
+    display: grid;
+    grid-template-columns: 4;
+}
+
+#going_label {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#names_1 {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 4;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#names_2 {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 4;
+    grid-column: 4;
+    grid-row: 2;
+}
+
+#lesly, #monica, #sylvia, #renato {
+    grid-column-start: 4;
+    grid-column-end: 4;
+}
+
+#chris, #james, #josh, #june {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+

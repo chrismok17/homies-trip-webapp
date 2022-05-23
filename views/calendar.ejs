@@ -46,23 +46,18 @@
             <div id="calendar-days">
                 <div class="empty"></div>
                 <% for (let i = 1; i <= 31; i++) { %>
+                    <a class="event_on_day" href="/event/day/:day">
                     <div class="day" id="<%=i %>">
-                        <% for (let e = 0; e < all_events.length; e++) { %>
+                        <div class="daynumber"><%=i %></div>
+                        <% for (let e in all_events) { %>
                             <% if (all_events[e]["day"] === i) { %>
                                 <div class="eventname" id="<%=i %>">
                                     <%=all_events[e]["name"] %>
                                 </div>
-                                <!-- <div class="eventtime">
-                                    <%=all_events[e]["time"] %>
-                                </div>
-                                <div class="eventlocation">
-                                    <%=all_events[e]["location"] %>
-                                </div> -->
-                            <% } else { %>
-                                <div class="daynumber"><%=i %></div>
                             <% } %>
                         <% } %>
                     </div>
+                    </a>
                 <% } %>
                 <div class="empty"></div>
                 <div class="empty"></div>
