@@ -16,7 +16,7 @@
             <a href="/">
                 Home
             </a>
-            <a href="/event/calendar">
+            <a href="/lalv22/calendar">
                 Calendar
             </a>
             <a href="#">
@@ -32,7 +32,7 @@
         <div class="title">
             <h1>August 2022</h1>
             <div id="add_event">
-                <a id="add_event_link" href="/event/add_event">
+                <a id="add_event_link" href="/lalv22/add_event">
                     Add Event
                 </a>
             </div>
@@ -46,7 +46,7 @@
             <div id="calendar-days">
                 <div class="empty"></div>
                 <% for (let i = 1; i <= 31; i++) { %>
-                    <a class="event_on_day" href="/event/<%=i %>">
+                    <a class="event_on_day" href="/lalv22/<%=i %>">
                     <div class="day" id="<%=i %>">
                         <div class="daynumber"><%=i %></div>
                         <% for (let e in all_events) { %>

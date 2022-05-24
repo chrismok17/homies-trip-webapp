@@ -50,14 +50,14 @@ body {
     align-items: center;
     justify-items: center;
     width: 35%;
-    height: 75vh;
+    height: 100%;
     background-color: #5f5f5f;
     border-radius: 15px;
     margin: 50px;
+    padding: 30px;
 }
 
 .main h1 {
-    margin: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -132,16 +132,50 @@ textarea {
 #buttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-.button {
+#submit, #cancel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     font-size: 1.2rem;
     font-weight: bold;
-    width: 25%;
+    color: var(--jet);
     height: inherit;
+    width: 25%;
     border-radius: 15px;
     background-color: var(--skyblue);
     border: none;
     cursor: pointer;
 }
+
+#cancel:link {
+    color: var(--jet);
+    text-decoration: none;
+}
+
+#cancel:visited {
+    color: var(--jet);
+    text-decoration: none;
+}
+
+
+button {
+    background-color: var(--skyblue);
+    height: inherit;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--jet);
+}
+
+#cancel:hover, button:hover {
+    background-color: #3a93c4;
+    color: var(--vegasgold);
+}
+

@@ -29,7 +29,7 @@ mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedT
 
 // Router
 eventRouter = require("./routes/event_router");
-app.use("/event", eventRouter);
+app.use("/lalv22", eventRouter);
 
 app.listen(port, () => {
     console.log(`App connected on port ${port}`);

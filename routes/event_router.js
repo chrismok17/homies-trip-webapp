@@ -40,7 +40,7 @@ router.get("/calendar", async (req, res) => {
 router.get("/:day", async (req, res) => {
     // let day_number = req.params.day
     let events = await Event.find({ day: req.params.day});
-    res.render("day_details", { events: events})
+    res.render("day_details", { events: events, day: req.params.day})
 })
 
 router.post("/event_details", (req, res) => {

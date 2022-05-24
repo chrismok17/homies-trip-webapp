@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Add an Event</title>
 </head>
 <body>
     <nav class="navbar">
@@ -16,7 +16,7 @@
             <a href="/">
                 Home
             </a>
-            <a href="/event/calendar">
+            <a href="/lalv22/calendar">
                 Calendar
             </a>
             <a href="#">
@@ -31,7 +31,7 @@
     <div class="main">
         <h1>Add an Event</h1>
         <div id="add_form">
-            <form action="/event/event_details" method="POST" id="input">
+            <form action="/lalv22/event_details" method="POST" id="input">
                 <div id="name_input">
                     <label for="name">Event Name:</label>
                     <input id="name" name="name">
@@ -85,12 +85,14 @@
                     <textarea id="notes" name="notes" rows="3" cols="20"></textarea>
                 </div>
                 <div id="buttons">
-                    <div class="button">
-                        <a id="cancel" href="/event/calendar">
+                    
+                    <a id="cancel" href="/lalv22/calendar">
+                        <div>
                             Cancel
-                        </a>
-                    </div>
-                    <div class="button">
+                        </div>
+                    </a>
+                    
+                    <div id="submit">
                         <button type="submit">Save</button>
                     </div>     
                 </div>
