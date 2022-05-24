@@ -23,6 +23,20 @@ function new_event(req, res) {
     event.save();
     // console.log(new_event)
     res.render("event_details", {name: event.name, day: event.day, time: event.time, location: event.location, going: event.going, notes: event.notes})   
+};
+
+function edit_event(req, res) {
+    let event = Event.findOneAndUpdate({
+        _id: req.body._id
+    }, {
+        name: req.body.name,
+        day: req.body.day,
+        time: req.body.time,
+        location: req.body.location,
+        going: req.body.going,
+        notes: req.body.notes
+    })
+    res.render("add_event", {event: event})
 }
 
 // All HTTP methods go here
@@ -41,6 +55,19 @@ router.get("/:day", async (req, res) => {
     // let day_number = req.params.day
     let events = await Event.find({ day: req.params.day});
     res.render("day_details", { events: events, day: req.params.day})
+})
+
+// FIX AHHHH
+router.get("/:day/edit_event", (req, res) => {
+    let event = Event.find({ _id: req.body._id})
+    res.render("add_event", {
+        name: event.name,
+        day: event.day,
+        time: event.time,
+        location: event.location,
+        going: event.going,
+        notes: event.notes
+    })
 })
 
 router.post("/event_details", (req, res) => {
