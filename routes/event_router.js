@@ -25,9 +25,9 @@ function new_event(req, res) {
     res.render("event_details", {name: event.name, day: event.day, time: event.time, location: event.location, going: event.going, notes: event.notes})   
 };
 
-function edit_event(req, res) {
-    let event = Event.findOneAndUpdate({
-        _id: req.body._id
+async function edit_event(req, res) {
+    let event = await Event.findByIdAndUpdate({
+        _id: req.body.id
     }, {
         name: req.body.name,
         day: req.body.day,
@@ -35,8 +35,9 @@ function edit_event(req, res) {
         location: req.body.location,
         going: req.body.going,
         notes: req.body.notes
-    })
-    res.render("add_event", {event: event})
+    }, {new: true})
+    event.save()
+    res.render("event_details", {name: event.name, day: event.day, time: event.time, location: event.location, going: event.going, notes: event.notes})
 }
 
 // All HTTP methods go here
@@ -51,23 +52,15 @@ router.get("/calendar", async (req, res) => {
     res.render("calendar", {all_events: all_events, days: days})
 })
 
-router.get("/:day", async (req, res) => {
-    // let day_number = req.params.day
+router.get("/aug:day", async (req, res) => {
     let events = await Event.find({ day: req.params.day});
     res.render("day_details", { events: events, day: req.params.day})
 })
 
-// FIX AHHHH
-router.get("/:day/edit_event", (req, res) => {
-    let event = Event.find({ _id: req.body._id})
-    res.render("add_event", {
-        name: event.name,
-        day: event.day,
-        time: event.time,
-        location: event.location,
-        going: event.going,
-        notes: event.notes
-    })
+
+router.get("/aug:day/:id", async (req, res) => {
+    let chosen_event = await Event.findById({ _id: req.params.id})
+    res.render("edit_event", { name: chosen_event.name, day: chosen_event.day, time: chosen_event.time, location: chosen_event.location, going: chosen_event.going, notes: chosen_event.notes })
 })
 
 router.post("/event_details", (req, res) => {

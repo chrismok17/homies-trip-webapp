@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/add_event.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+    <title>Add an Event</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <a href="/">
+                Home
+            </a>
+            <a href="/lalv22/calendar">
+                Calendar
+            </a>
+            <a href="#">
+                flights
+            </a>
+            <a href="#">
+                hotels
+            </a>
+        </ul>
+        
+    </nav>  
+    <div class="main">
+        <h1><%=name %></h1>
+        <div id="add_form">
+            <form action="/lalv22/event_details" method="POST" id="input">
+                <div id="name_input">
+                    <label for="name">Event Name:</label>
+                    <input id="name" name="name" value="<%=name %>">
+                </div>
+                <div id="day_input">
+                    <label for="day">Day:</label>
+                    <input id="day" name="day" value="<%=day %>">
+                </div>
+                <div id="time_input">
+                    <label for="time">Time:</label>
+                    <input id="time" name="time" value="<%=time %>">
+                </div>
+                <div id="location_input">
+                    <label for="location">Location:</label>
+                    <input id="location" name="location" value="<%=location %>">
+                </div>
+                <div id="going_input">
+                    <label id="going_label">Going:</label>
+                    
+                    <!-- <label for="all">All</label>
+                    <input type="checkbox" id="all" name="going" value="All"> -->
+                    <div id="names_1">
+                        <label for="chris">Chris</label>
+                        <input type="checkbox" id="chris" name="going" value="Chris">
+
+                        <label for="james">James</label>
+                        <input type="checkbox" id="james" name="going" value="James">
+
+                        <label for="josh">Josh</label>
+                        <input type="checkbox" id="josh" name="going" value="Josh">
+
+                        <label for="june">June</label>
+                        <input type="checkbox" id="june" name="going" value="June">
+                    </div>
+                    <div id="names_2">
+                        <label for="lesly">Lesly</label>
+                        <input type="checkbox" id="lesly" name="going" value="Lesly">
+
+                        <label for="monica">Monica</label>
+                        <input type="checkbox" id="monica" name="going" value="Monica">
+
+                        <label for="renato">Renato</label>
+                        <input type="checkbox" id="renato" name="going" value="Renato">
+
+                        <label for="sylvia">Sylvia</label>
+                        <input type="checkbox" id="sylvia" name="going" value="Sylvia">
+                    </div>
+                    
+                </div>
+                <div id="notes_input">
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" name="notes" rows="3" cols="20"><%=notes %></textarea>
+                </div>
+                <div id="buttons">
+                    
+                    <a id="cancel" href="/lalv22/calendar">
+                        <div>
+                            Cancel
+                        </div>
+                    </a>
+                    
+                    <div id="submit">
+                        <button type="submit">Save</button>
+                    </div>     
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
