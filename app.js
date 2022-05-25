@@ -21,6 +21,7 @@ app.get("/", (req, res) => {
 // Mongo connection
 
 const db = mongoose.connection;
+mongoose.set("debug", true)
 require("dotenv").config();
 
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
