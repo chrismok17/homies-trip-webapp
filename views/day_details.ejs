@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/day_details.css">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
@@ -14,10 +15,10 @@
     <nav class="navbar">
         <ul>
             <a href="/">
-                home
+                Home
             </a>
             <a href="/lalv22/calendar">
-                calendar
+                Calendar
             </a>
             <a href="#">
                 flights
@@ -27,25 +28,44 @@
             </a>
         </ul>
     </nav>  
-    <main>
+    <main class="main">
         <h1 id="day_title">August <%=day %></h1>
         <% for (let i in events) { %>
             <div class="event">
-                <h2><%=events[i]["name"] %></h2>
-                <h2><%=events[i]["time"] %></h2>
-                <h2><%=events[i]["location"] %></h2>
-                <% for (let j = 0; j < events[i]["going"].length; j++) { %>
-                    <%=events[i]["going"][j] %>
-                <% } %>
-                <h2><%=events[i]["notes"] %></h2>
-                <div class="buttons">
-                    <a id="edit" href="/lalv22/aug<%=day %>/<%=events[i]['_id'] %>">
-                        Edit
-                    </a>
-                    <a id="delete">
-                        Delete
-                    </a>
+                <h2 id="name"><%=events[i]["name"] %></h2>
+                <h3 id="time"><%=events[i]["time"] %></h3>
+                <h3 id="location"><%=events[i]["location"] %></h3>
+                <div class="going_list">
+                    <div class="going_list1">
+                        <% for (let j = 0; j < 4; j++) { %>
+                            <p id="<%=events[i]['going'][j] %>"><%=events[i]["going"][j] %></p>
+                        <% } %>
+                    </div>
+                    <div class="going_list2">
+                        <% for (let j = 4; j < 8; j++) { %>
+                            <p id="<%=events[i]['going'][j] %>"><%=events[i]["going"][j] %></p>
+                        <% } %>
+                    </div>
                 </div>
+                <div class="notes">
+                    <h3>Notes:</h3>
+                    <p id="notes"><%=events[i]["notes"] %></p>
+                </div>
+                
+            </div>
+            <div class="buttons">
+                <a id="edit" href="/lalv22/aug<%=day %>/<%=events[i]['_id'] %>">
+                    Edit
+                </a>
+                <form id="delete" method="post" action="/lalv22/<%=events[i]['_id'] %>/delete">
+                    <button type="submit" onclick="return confirm('Are you sure you want to delete?')">
+                        Delete
+                    </button>
+                    
+                </form>
+                <!-- <a id="delete" href="/lalv22/<%=events[i]['_id'] %>/delete">
+                    Delete
+                </a> -->
             </div>
             
         <% } %>

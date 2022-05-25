@@ -72,6 +72,7 @@ router.post("/event_details", (req, res) => {
     new_event(req, res)
 })
 
+// Update event entry
 router.post("/:id/updated_event", async (req, res) => {
     let updated_event = await Event.findByIdAndUpdate({ _id: req.params.id },
     {
@@ -85,6 +86,14 @@ router.post("/:id/updated_event", async (req, res) => {
     )
     console.log(updated_event.name)
     res.render("event_details", {id: updated_event._id, name: updated_event.name, day: updated_event.day, time: updated_event.time, location: updated_event.location, going: updated_event.going, notes: updated_event.notes})
+})
+
+// Delete an event
+router.post("/:id/delete", async (req, res) => {
+    let deleted_event = await Event.findByIdAndDelete({ _id: req.params.id })
+    let all_events = await Event.find()
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    res.render("calendar", {all_events: all_events, days: days})
 })
 
 module.exports = router
