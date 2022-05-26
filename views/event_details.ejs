@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/event_details.css">
     <title>Document</title>
 </head>
 <body>
@@ -28,15 +29,17 @@
         </ul>
     </nav>  
     <main>
-        <h1>This is a new event after creation</h1>
-        <p><%=name%></p>
-        <p><%=day%></p>
-        <p><%=time%></p>
-        <p><%=location%></p>
-        <% for (let i in going) { %>
-            <p><%=going[i] %></p>
-        <% } %>
-        <p><%=notes%></p>
+        <div class="details">
+            <h1>This is a new event after creation</h1>
+            <p><%=name%></p>
+            <p><%=day%></p>
+            <p><%=time%></p>
+            <p><%=location%></p>
+            <% for (let i in going) { %>
+                <p><%=going[i] %></p>
+            <% } %>
+            <p><%=notes%></p>
+        </div>
     </main>
 </body>
 </html>
