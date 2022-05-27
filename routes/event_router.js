@@ -54,6 +54,13 @@ router.get("/calendar", async (req, res) => {
     res.render("calendar", {all_events: all_events, days: days})
 })
 
+// MAp
+router.get("/map", (req, res) => {
+
+    res.render("map")
+
+})
+
 // Renders the day's details with all events for that day
 router.get("/aug:day", async (req, res) => {
     let events = await Event.find({ day: req.params.day});
