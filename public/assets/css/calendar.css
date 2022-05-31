@@ -135,9 +135,17 @@ a:hover {
     transition: background-color 200ms, color 200ms;
 }
 
+li {
+    list-style: none;
+}
+
 .day {
     font-size: 0.75rem;
     font-weight:700;
+}
+
+.eventname {
+    padding-bottom: 5px;
 }
 
 .eventname#1 {

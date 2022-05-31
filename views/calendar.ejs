@@ -53,7 +53,17 @@
                         <% for (let e in all_events) { %>
                             <% if (all_events[e]["day"] == i) { %>
                                 <div class="eventname" id="<%=i %>">
-                                    <%=all_events[e]["name"] %>
+                                    <li>
+                                        <ul id="e_name">
+                                            <p><%=all_events[e]["name"] %> </p>
+                                        </ul>
+                                        <% if (all_events[e]["time"] != "") {%>
+                                            <ul>
+                                                (<%=all_events[e]["time"]%>)
+                                            </ul>
+                                            
+                                        <% } %>
+                                    </li>
                                 </div>
                             <% } %>
                         <% } %>
