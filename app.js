@@ -33,7 +33,7 @@ eventRouter = require("./routes/event_router");
 app.use("/lalv22", eventRouter);
 
 app.get("*", (req, res) => {
-    res.status(404).send("ERROR LUL")
+    res.status(404).render("404page")
 });
 
 app.listen(port, () => {

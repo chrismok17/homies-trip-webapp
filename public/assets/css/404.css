@@ -1,0 +1,122 @@
+:root {
+    --jet: #39393A;
+    --skyblue: #86BBD8;
+    --etonblue: #8BBF9F;
+    --vegasgold: #D6BA73;
+    --wheat: #F5E0B7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Assistant', sans-serif;
+}
+.navbar {
+    display: flex;
+    flex-direction:row;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--skyblue);
+    justify-content: space-evenly;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: var(--jet);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: 0px 100px 0px 100px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+a:visited, a:link{
+    color: var(--jet);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--vegasgold);
+    text-shadow: #39393A;
+}
+
+body {
+    background-color: var(--jet);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#renato {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+}
+
+
+.bubble {
+    width: 300px;
+    height: 150px;
+    margin: 50px auto;
+    border-radius: 15px;
+    background: #00bfb6;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-weight: 900;
+    font-family: arial;
+    position: relative;
+}
+.bubble:before {
+    content: "";
+    width: 0px;
+    height: 75%;
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid #00bfb6;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid #00bfb6;
+    left: -16px;
+    top: 0px;
+}
+
+.sirens {
+    text-align: center;
+    margin: 25px;
+}
+
+div span {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 100;
+    font-family: 'Turret Road', cursive;
+    letter-spacing: 5px;
+    font-size: 100px;	
+}
+div span:first-child {
+    animation: red 0.5s linear infinite;
+    animation-delay: 0.25s;
+}
+div span:last-child {
+    animation: blue 0.5s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes red {
+    from {
+        text-shadow: 0 0 5px red,
+                     0 0 15px red,
+                     0 0 30px red,
+                     0 0 60px red;
+    }
+}
+@keyframes blue {
+    from {
+        text-shadow: 0 0 5px blue,
+                     0 0 15px blue,
+                     0 0 30px blue,
+                     0 0 60px blue;
+    }
+}
