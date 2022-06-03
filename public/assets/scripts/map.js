@@ -74,6 +74,28 @@ map.on('load', () => {
     'coordinates': [-117.91786224395487, 33.809092952517155]
     }
     },
+    {
+        'type': 'Feature',
+        'properties': {
+        'description':
+        "<h1>Planet Hollywood</h1>"
+        },
+        'geometry': {
+        'type': 'Point',
+        'coordinates': [-115.140580, 36.169090]
+        }
+        },
+    {
+        'type': 'Feature',
+        'properties': {
+        'description':
+        "<h1>Grand Canyon</h1>"
+        },
+        'geometry': {
+        'type': 'Point',
+        'coordinates': [-112.112999, 36.106964]
+        }
+        },
     ]
     }
     });

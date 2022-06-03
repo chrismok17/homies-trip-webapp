@@ -95,7 +95,8 @@ a:hover {
 }
 
 #calendar {
-    width: 60%;
+    width: 85%;
+    margin-bottom: 50px;
     /* border-style: solid; */
 }
 
@@ -106,12 +107,14 @@ a:hover {
     border-width: 1px;
     text-align: center;
     background-color: var(--etonblue);
+    width: 100%;
 }
 
 #calendar-header .name {
     padding: 5px;
-    border-style: solid;
-    border-width: 1px;
+    /* border-style: solid;
+    border-width: 1px; */
+    width: 100%;
 }
 
 #calendar-days {
@@ -121,6 +124,7 @@ a:hover {
     background-color: var(--wheat);
     border-style: solid;
     border-width: 1px;
+    width: 100%;
 }
 
 .event_on_day {
@@ -135,8 +139,14 @@ a:hover {
     transition: background-color 200ms, color 200ms;
 }
 
-li {
+ul > li {
     list-style: none;
+    display: inline-block;
+}
+
+#e_name {
+    color: black;
+    padding-right: 2px;
 }
 
 .day {
@@ -145,7 +155,7 @@ li {
 }
 
 .eventname {
-    padding-bottom: 5px;
+    padding-bottom: 2.5px;
 }
 
 .eventname#1 {
