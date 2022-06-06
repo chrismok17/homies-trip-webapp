@@ -177,6 +177,43 @@ button {
     font-size: 1.2rem;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 52%;
+    height: 100%;
+    margin: auto;
+}
+
+.modal_content {
+    background-color: #5f5f5f;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px;
+    border: 1px solid #888;
+    width: 100%; /* Could be more or less, depending on screen size */
+    border-radius: 15px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#submit:hover {
+    background-color: green;
+}
+
 #edit:hover{
     background-color: #3a93c4;
     color: var(--vegasgold);
@@ -185,4 +222,68 @@ button {
 button:hover {
     background-color: #ce4735;
     color: var(--vegasgold);
+}
+
+
+label {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+#input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#name_input, #day_input, #time_input, #location_input, #notes_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+
+#going_input {
+    display: grid;
+    grid-template-columns: 2;
+    padding-bottom: 10px;
+}
+
+#going_label {
+    grid-column: 1;
+    grid-row: 1;
+    padding-bottom: 10px;
+}
+
+#names_1 {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 4;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#names_2 {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 4;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#lesly, #monica, #sylvia, #renato {
+    grid-column-start: 4;
+    grid-column-end: 4;
+}
+
+#chris, #james, #josh, #june {
+    grid-column-start: 2;
+    grid-column-end: 2;
 }
