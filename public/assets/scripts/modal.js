@@ -1,18 +1,28 @@
-let modal = document.querySelector("#form_modal");
+let modal = document.querySelectorAll(".modal");
 
-let btn = document.querySelector("#edit");
+let btn = document.querySelectorAll("#edit");
 
-let span = document.querySelectorAll(".close")[0];
+let span = document.querySelectorAll(".close");
 
-btn.onclick = function() {
-    modal.style.display = "block";
-};
 
-span.onclick = function() {
-    modal.style.display = "none";
-};
+modal.forEach((form, i) => {
+    btn.forEach((button, j) => {
+        if (i == j) {
+            button.addEventListener("click", () => {
+            form.style.display = "block";
+            }); 
+        };
 
-window.onclick = function(e) {
+        span.forEach((x) => {
+            x.addEventListener("click", () => {
+                form.style.display = "none";
+            });
+        });
+        
+    });
+});
+
+window.onclick = (e) => {
     if (e.target == modal) {
         modal.style.display = "none";
     };
