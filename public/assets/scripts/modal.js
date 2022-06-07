@@ -18,12 +18,12 @@ modal.forEach((form, i) => {
                 form.style.display = "none";
             });
         });
+
+        window.addEventListener("click", (e) =>{
+            if (e.target == form) {
+                form.style.display = "none";
+            };
+        });
         
     });
 });
-
-window.onclick = (e) => {
-    if (e.target == modal) {
-        modal.style.display = "none";
-    };
-};
