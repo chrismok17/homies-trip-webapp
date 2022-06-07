@@ -68,76 +68,72 @@
                 </form>
                 
             </div>
-            
-            
-        <% } %>
-        <% for (let i in events) { %>
-        <div id="form_modal" class="modal">
-            <div class="modal_content">
-                
-                <span class="close">&times;</span>
-                
-                <form action="/lalv22/event_details" method="POST" id="input">
-                    <div id="name_input">
-                        <label for="name">Event Name:</label>
-                        <input id="name" name="name" value="<%=events[i]['name'] %>">
-                    </div>
-                    <div id="day_input">
-                        <label for="day">Day:</label>
-                        <input id="day" name="day" value="<%=day %>">
-                    </div>
-                    <div id="time_input">
-                        <label for="time">Time:</label>
-                        <input id="time" name="time" value="<%=events[i]['time'] %>">
-                    </div>
-                    <div id="location_input">
-                        <label for="location">Location:</label>
-                        <input id="location" name="location" value="<%=events[i]['location'] %>">
-                    </div>
-                    <div id="going_input">
-                        <label id="going_label">Going:</label>
-                        
-                        <!-- <label for="all">All</label>
-                        <input type="checkbox" id="all" name="going" value="All"> -->
-                        <div id="names_1">
-                            <label for="chris">Chris</label>
-                            <input type="checkbox" id="chris" name="going" value="Chris">
-    
-                            <label for="james">James</label>
-                            <input type="checkbox" id="james" name="going" value="James">
-    
-                            <label for="josh">Josh</label>
-                            <input type="checkbox" id="josh" name="going" value="Josh">
-    
-                            <label for="june">June</label>
-                            <input type="checkbox" id="june" name="going" value="June">
-                        </div>
-                        <div id="names_2">
-                            <label for="lesly">Lesly</label>
-                            <input type="checkbox" id="lesly" name="going" value="Lesly">
-    
-                            <label for="monica">Monica</label>
-                            <input type="checkbox" id="monica" name="going" value="Monica">
-    
-                            <label for="renato">Renato</label>
-                            <input type="checkbox" id="renato" name="going" value="Renato">
-    
-                            <label for="sylvia">Sylvia</label>
-                            <input type="checkbox" id="sylvia" name="going" value="Sylvia">
-                        </div>
-                    </div>
-                    <div id="notes_input">
-                        <label for="notes">Notes:</label>
-                        <textarea id="notes" name="notes" rows="3" cols="20"><%=events[i]['notes'] %></textarea>
-                    </div>
-                    <div id="submit">
-                        <button type="submit">Save</button>
-                    </div>
+            <div id="form_modal" class="modal">
+                <div class="modal_content">
                     
-                </form>
+                    <span class="close">&times;</span>
+                    
+                    <form action="/lalv22/event_details" method="POST" id="input">
+                        <div id="name_input">
+                            <label for="name">Event Name:</label>
+                            <input id="name" name="name" value="<%=events[i]['name'] %>">
+                        </div>
+                        <div id="day_input">
+                            <label for="day">Day:</label>
+                            <input id="day" name="day" value="<%=day %>">
+                        </div>
+                        <div id="time_input">
+                            <label for="time">Time:</label>
+                            <input id="time" name="time" value="<%=events[i]['time'] %>">
+                        </div>
+                        <div id="location_input">
+                            <label for="location">Location:</label>
+                            <input id="location" name="location" value="<%=events[i]['location'] %>">
+                        </div>
+                        <div id="going_input">
+                            <label id="going_label">Going:</label>
+                            
+                            <!-- <label for="all">All</label>
+                            <input type="checkbox" id="all" name="going" value="All"> -->
+                            <div id="names_1">
+                                <label for="chris">Chris</label>
+                                <input type="checkbox" id="chris" name="going" value="Chris">
+        
+                                <label for="james">James</label>
+                                <input type="checkbox" id="james" name="going" value="James">
+        
+                                <label for="josh">Josh</label>
+                                <input type="checkbox" id="josh" name="going" value="Josh">
+        
+                                <label for="june">June</label>
+                                <input type="checkbox" id="june" name="going" value="June">
+                            </div>
+                            <div id="names_2">
+                                <label for="lesly">Lesly</label>
+                                <input type="checkbox" id="lesly" name="going" value="Lesly">
+        
+                                <label for="monica">Monica</label>
+                                <input type="checkbox" id="monica" name="going" value="Monica">
+        
+                                <label for="renato">Renato</label>
+                                <input type="checkbox" id="renato" name="going" value="Renato">
+        
+                                <label for="sylvia">Sylvia</label>
+                                <input type="checkbox" id="sylvia" name="going" value="Sylvia">
+                            </div>
+                        </div>
+                        <div id="notes_input">
+                            <label for="notes">Notes:</label>
+                            <textarea id="notes" name="notes" rows="3" cols="20"><%=events[i]['notes'] %></textarea>
+                        </div>
+                        <div id="submit">
+                            <button type="submit">Save</button>
+                        </div>
+                        
+                    </form>
+                </div>
+                
             </div>
-            
-        </div>
         <% } %>
     </main>
 
