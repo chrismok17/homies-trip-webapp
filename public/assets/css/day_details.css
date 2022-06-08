@@ -49,7 +49,17 @@ body {
 
 #day_title {
     font-size: 2.7rem;
-    margin: 50px;
+    margin: 50px 50px 25px 50px;
+}
+
+#add_event {
+    margin: 25px;
+    width: 7%;
+}
+
+#add_event:hover {
+    color: var(--vegasgold);
+    background-color: #3a93c4;
 }
 
 .event {

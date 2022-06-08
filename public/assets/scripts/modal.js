@@ -1,3 +1,4 @@
+// Edit event modal
 let modal = document.querySelectorAll(".modal");
 
 let btn = document.querySelectorAll("#edit");
@@ -27,3 +28,13 @@ modal.forEach((form, i) => {
         
     });
 });
+
+// Add event modal
+
+let add_modal = document.querySelector("#add_modal");
+
+let add_btn = document.querySelector("#add_event");
+
+add_btn.addEventListener("click", () => {
+    add_modal.style.display = "block";
+})
