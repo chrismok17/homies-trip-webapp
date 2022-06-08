@@ -52,12 +52,49 @@ body {
     margin: 50px 50px 25px 50px;
 }
 
-#add_event {
-    margin: 25px;
-    width: 7%;
+#title_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 40%;
+    margin: 15px;
 }
 
-#add_event:hover {
+#back_div {
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#add_event, #back{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--jet);
+    height: inherit;
+    width: 25%;
+    border-radius: 15px;
+    background-color: var(--skyblue);
+    border: none;
+    cursor: pointer;
+}
+
+#back:link {
+    color: var(--jet);
+    text-decoration: none;
+}
+
+#back:visited {
+    color: var(--jet);
+    text-decoration: none;
+}
+
+#add_event:hover, #back:hover {
     color: var(--vegasgold);
     background-color: #3a93c4;
 }

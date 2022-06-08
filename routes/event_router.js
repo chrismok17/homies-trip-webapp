@@ -49,7 +49,7 @@ router.get("/add_event", (req, res) => {
 
 // Renders the calendar page with all events
 router.get("/calendar", async (req, res) => {
-    let all_events = await Event.find()
+    let all_events = await Event.find().sort({"time": 1});
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     res.render("calendar", {all_events: all_events, days: days})
 })
@@ -63,7 +63,7 @@ router.get("/map", async (req, res) => {
 
 // Renders the day's details with all events for that day
 router.get("/aug:day", async (req, res) => {
-    let events = await Event.find({ day: req.params.day});
+    let events = await Event.find({ day: req.params.day}).sort({"time": 1});
     res.render("day_details", { events: events, day: req.params.day})
 })
 

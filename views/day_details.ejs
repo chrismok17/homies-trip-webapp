@@ -30,9 +30,17 @@
     </nav>  
     <main class="main">
         <h1 id="day_title">August <%=day %></h1>
-        <button id="add_event">
-            Add Event
-        </button>
+        <div id="title_buttons">
+            <a id="back" href="/lalv22/calendar">
+                <div id="back_div">
+                    &#8592; Back
+                </div>
+            </a>
+            <button id="add_event">
+                Add Event
+            </button>
+        </div>
+        
         <% for (let i in events) { %>
             <div class="event">
                 <h2 id="name"><%=events[i]["name"] %></h2>
@@ -76,7 +84,7 @@
                     
                     <span class="close">&times;</span>
                     
-                    <form action="/lalv22/event_details" method="POST" id="input">
+                    <form action="/lalv22/<%=events[i]['_id'] %>/updated_event" method="POST" id="input">
                         <div id="name_input">
                             <label for="name">Event Name:</label>
                             <input id="name" name="name" value="<%=events[i]['name'] %>">
