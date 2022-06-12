@@ -12,22 +12,7 @@
     <title>August <%=day %></title>
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <a href="/">
-                Home
-            </a>
-            <a href="/lalv22/calendar">
-                Calendar
-            </a>
-            <a href="/lalv22/events">
-                Events
-            </a>
-            <a href="/error">
-                Click Me
-            </a>
-        </ul>
-    </nav>  
+    <%- include ("partials/nav.ejs") %>
     <main class="main">
         <h1 id="day_title">August <%=day %></h1>
         <div id="title_buttons">

@@ -44,6 +44,16 @@ body {
     font-weight: bold;
 }
 
+a:visited, a:link{
+    color: var(--jet);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--vegasgold);
+    text-shadow: #39393A;
+}
+
 .main {
     display: flex;
     flex-direction: column;

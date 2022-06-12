@@ -54,9 +54,10 @@ router.get("/calendar", async (req, res) => {
     res.render("calendar", {all_events: all_events, days: days})
 })
 
-// MAp
+// all events
 router.get("/events", async (req, res) => {
-    let all_events = await Event.find().sort({"day": 1})
+    // let all_events = await Event.find().sort({"day": 1})
+    let all_events = await Event.find({"day": ""})
     res.render("events", {all_events: all_events})
 
 })

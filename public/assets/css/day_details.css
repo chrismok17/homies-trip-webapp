@@ -155,7 +155,7 @@ body {
     grid-column: 1;
     display: grid;
     grid-template-columns: 2; 
-    grid-template-rows: 4;
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .going_list2 {
@@ -163,7 +163,7 @@ body {
     grid-column: 2;
     display: grid;
     grid-template-columns: 2; 
-    grid-template-rows: 4;
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .notes {
