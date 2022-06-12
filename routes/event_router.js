@@ -54,10 +54,10 @@ router.get("/calendar", async (req, res) => {
     res.render("calendar", {all_events: all_events, days: days})
 })
 
-// all events
+// all events with no day associated
 router.get("/events", async (req, res) => {
     // let all_events = await Event.find().sort({"day": 1})
-    let all_events = await Event.find({"day": ""})
+    let all_events = await Event.find({"day": ""}).sort({"name": 1})
     res.render("events", {all_events: all_events})
 
 })
