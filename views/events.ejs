@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/events.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <title>Events</title>
+</head>
+<body>
+    <%- include ("partials/nav.ejs") %> 
+    <div class="main">
+        <% for (let i = 0; i < all_events.length; i++) { %>
+            <div class="event">
+                <h2 id="name"><%=all_events[i]["name"] %></h2>
+                <h3 id="day">August <%=all_events[i]["day"] %></h3>
+                <h3 id="time"><%=all_events[i]["time"] %></h3>
+                <h3 id="location"><%=all_events[i]["location"] %></h3>
+                <div class="going_list">
+                    <div class="going_list1">
+                        <% for (let j = 0; j < 4; j++) { %>
+                            <p id="<%=all_events[i]['going'][j] %>"><%=all_events[i]["going"][j] %></p>
+                        <% } %>
+                    </div>
+                    <div class="going_list2">
+                        <% for (let j = 4; j < 8; j++) { %>
+                            <p id="<%=all_events[i]['going'][j] %>"><%=all_events[i]["going"][j] %></p>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="notes">
+                    <h3>Notes:</h3>
+                    <p id="notes"><%=all_events[i]["notes"] %></p>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    
+</body>
+</html>
