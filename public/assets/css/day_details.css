@@ -356,7 +356,7 @@ textarea {
     grid-column-end: 4;
 }
 
-#chris, #james, #josh, #june {
+#chris, #james, #josh, #all {
     grid-column-start: 2;
     grid-column-end: 2;
 }
