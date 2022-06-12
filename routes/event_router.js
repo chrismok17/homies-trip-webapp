@@ -55,9 +55,9 @@ router.get("/calendar", async (req, res) => {
 })
 
 // MAp
-router.get("/map", async (req, res) => {
-    let all_events = await Event.find()
-    res.render("map", {all_events: all_events})
+router.get("/events", async (req, res) => {
+    let all_events = await Event.find().sort({"day": 1})
+    res.render("events", {all_events: all_events})
 
 })
 
