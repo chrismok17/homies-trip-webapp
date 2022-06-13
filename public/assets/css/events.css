@@ -71,22 +71,9 @@ a:hover {
     background-color: var(--wheat);
     padding: 15px;
     border-radius: 15px;
-    margin: 2% auto;
+    margin: 1% auto;
     grid-column: 1;
 }
-
-/* .event:nth-child(even) {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    width: 80%;
-    max-height: 220px;
-    color: var(--jet);
-    background-color: var(--wheat);
-    padding: 15px;
-    border-radius: 15px;
-    margin: 10px;
-    grid-column: 2;
-} */
 
 #name {
     font-size: 2.5rem;
