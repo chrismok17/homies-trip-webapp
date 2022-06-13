@@ -14,9 +14,9 @@
 <body>
     <%- include ("partials/nav.ejs") %> 
     <div id="map">
-        <img src="/assets/images/LosSantosMap.jpg">  
+        <!-- <img src="/assets/images/LosSantosMap.jpg">   -->
     </div>
-    <!-- <script>
+    <script>
         let addZoom = () => {
             let container = document.querySelector("#map"), imgsrc = container.currentStyle || window.getComputedStyle(container, false);
             imgsrc = imgsrc.backgroundImage.slice(4, -1).replace(/"/g, "");
@@ -52,6 +52,6 @@
         window.onload = () => {
             addZoom();
         };
-    </script> -->
+    </script>
 </body>
 </html>
