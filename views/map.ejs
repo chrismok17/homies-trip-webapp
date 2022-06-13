@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <title>Map</title>
+</head>
+<body>
+    <%- include ("partials/nav.ejs") %> 
+    <div id="map">
+        <!-- <img src="/assets/images/LosSantosMap.jpg">   -->
+    </div>
+    <script>
+        let addZoom = () => {
+            let container = document.querySelector("#map"), imgsrc = container.currentStyle || window.getComputedStyle(container, false);
+            imgsrc = imgsrc.backgroundImage.slice(4, -1).replace(/"/g, "");
+
+            let img = new Image();
+            img.src = imgsrc;
+            img.onload = () => {
+                let ratio = img.naturalHeight / img.naturalWidth,
+                percentage = ratio * 100 + "%";
+            
+                // (B2) ATTACH ZOOM ON MOUSE MOVE
+                container.onmousemove = (e) => {
+                let rect = e.target.getBoundingClientRect(),
+                    xPos = e.clientX - rect.left,
+                    yPos = e.clientY - rect.top,
+                    xPercent = xPos / (container.clientWidth / 100) + "%",
+                    yPercent = yPos / ((container.clientWidth * ratio) / 100) + "%";
+            
+                Object.assign(container.style, {
+                    backgroundPosition: xPercent + " " + yPercent,
+                    backgroundSize: img.naturalWidth + "px"
+                    });
+                };
+
+                container.onmouseleave = (e) => {
+                    Object.assign(container.style, {
+                        backgroundPosition: "center",
+                        backgroundSize: "cover"
+                    });
+                };
+            }
+        };
+        window.onload = () => {
+            addZoom();
+        };
+    </script>
+</body>
+</html>

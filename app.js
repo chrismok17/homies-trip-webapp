@@ -18,6 +18,10 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
+app.get("/map", (req, res) => {
+    res.render("map")
+})
+
 // Mongo connection
 
 const db = mongoose.connection;

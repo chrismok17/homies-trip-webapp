@@ -82,10 +82,10 @@ a:hover {
 } */
 
 iframe {
-    --glow-color: rgb(217, 176, 255);
-    --glow-spread-color: rgba(191, 123, 255, 0.781);
-    --enhanced-glow-color: rgb(231, 206, 255);
-    --btn-color: rgb(100, 61, 136);
+    --glow-color: #63875b;
+    --glow-spread-color: #94b185;
+    --enhanced-glow-color: #3e7032;
+    --btn-color: #63875b;
     border: .25em solid var(--glow-color);
     color: var(--glow-color);
     font-size: 15px;
@@ -131,3 +131,14 @@ iframe {
            0 0 2.5em 2em var(--glow-spread-color),
            inset 0 0 .5em .25em var(--glow-color);
    }
+
+#map {
+    margin: 1% auto;
+    width: 700px;
+    height: 800px;
+    border-style: solid;
+
+    background: url(/assets/images/LosSantosMap.jpg);
+    background-position: center;
+    background-size: cover;
+}
